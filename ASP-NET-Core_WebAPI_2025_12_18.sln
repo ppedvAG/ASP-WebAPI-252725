@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M003-Controller", "M003-Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M003-MinimalAPI", "M003-MinimalAPI\M003-MinimalAPI.csproj", "{2E4C7D8F-C878-4751-AD12-39772CB82C09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M000_MovieStore", "M000_MovieStore\M000_MovieStore.csproj", "{EF820C0F-ECED-43CD-95CF-6928D3E57ABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M004_Routing", "M004_Routing\M004_Routing.csproj", "{7377A420-1E46-46C3-91FD-C9FFB2B9EF61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2E4C7D8F-C878-4751-AD12-39772CB82C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4C7D8F-C878-4751-AD12-39772CB82C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4C7D8F-C878-4751-AD12-39772CB82C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF820C0F-ECED-43CD-95CF-6928D3E57ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF820C0F-ECED-43CD-95CF-6928D3E57ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF820C0F-ECED-43CD-95CF-6928D3E57ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF820C0F-ECED-43CD-95CF-6928D3E57ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7377A420-1E46-46C3-91FD-C9FFB2B9EF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7377A420-1E46-46C3-91FD-C9FFB2B9EF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7377A420-1E46-46C3-91FD-C9FFB2B9EF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7377A420-1E46-46C3-91FD-C9FFB2B9EF61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,3 +17,20 @@ Accept: application/json
 
 GET {{M000_HostAddress}}/weatherforecast/GetCounterEntries
 Accept: application/json
+
+### Get all movies
+GET {{M000_HostAddress}}/api/moviestore/allmovies
+Accept: application/json
+
+### Create movie
+POST {{M000_HostAddress}}/api/moviestore/NewMovie
+Content-Type: application/json
+Accept: application/json
+ 
+{
+ "id": 5,
+ "title": "Pulp Fiction",
+ "description": "Some iconic movie",
+ "price": "5.99",
+ "genre": 0
+}

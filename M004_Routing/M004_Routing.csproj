@@ -10,12 +10,4 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\M000_MovieStore\M000_MovieStore.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -1,6 +1,3 @@
-using M000.Services;
-using M000_MovieStore;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,11 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
-builder.Services.AddSingleton<CounterService>();
-
-//Wenn in einem Controller IMovieService verwendet wird, kann hier definiert werden, um welches konkrete Objekt es sich handelt
-builder.Services.AddSingleton<IMovieService, MovieService>();
 
 var app = builder.Build();
 
@@ -26,6 +18,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.MapControllerRoute("default", "{controller}/api/{action}");
 
 app.Run();
