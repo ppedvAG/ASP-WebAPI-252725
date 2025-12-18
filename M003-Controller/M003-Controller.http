@@ -1,0 +1,9 @@
+@M003_Controller_HostAddress = http://localhost:5130
+
+GET {{M003_Controller_HostAddress}}/weatherforecast/get2
+Accept: application/json
+
+###
+
+GET {{M003_Controller_HostAddress}}/weatherforecast/cf?C=10&F=50
+Accept: application/json

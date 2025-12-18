@@ -1,0 +1,19 @@
+@M000_HostAddress = http://localhost:5166
+
+GET {{M000_HostAddress}}/weatherforecast/GetPrettyDate
+Accept: application/json
+
+###
+
+GET {{M000_HostAddress}}/weatherforecast/GetCurrentDate
+Accept: application/json
+
+###
+
+GET {{M000_HostAddress}}/weatherforecast/GetCurrentTime
+Accept: application/json
+
+###
+
+GET {{M000_HostAddress}}/weatherforecast/GetCounterEntries
+Accept: application/json

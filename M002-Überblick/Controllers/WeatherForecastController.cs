@@ -40,8 +40,8 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
 	/// <summary>
 	/// Services können anstatt im Konstruktor auch lokal für eine Methode direkt empfangen werden
 	/// </summary>
-	[HttpGet(Name = "GetWeatherForecast")]
-	public IEnumerable<WeatherForecast> Get([FromServices] DateService ds)
+	[HttpGet]
+	public IEnumerable<WeatherForecast> Get_CurrentWeather([FromServices] DateService ds)
 	{
 		logger.Log(LogLevel.Information, "Hallo");
 		logger.Log(LogLevel.Information, ds.GetCurrentDate().ToString());
