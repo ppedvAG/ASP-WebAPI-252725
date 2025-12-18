@@ -1,0 +1,9 @@
+@M001_Einführung_HostAddress = http://localhost:5001
+
+GET {{M001_Einführung_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{M001_Einführung_HostAddress}}/weatherforecast/
+Accept: application/xml
