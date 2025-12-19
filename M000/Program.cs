@@ -1,5 +1,7 @@
 using M000.Services;
 using M000_MovieStore;
+using Microsoft.EntityFrameworkCore;
+using OpenTelemetry.Logs;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,8 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers()
-	.AddJsonOptions(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()))
-	.AddXmlSerializerFormatters();
+	.AddJsonOptions(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+
+builder.Services.AddDbContext<MovieStoreDbContext>(o => o.UseSqlServer("Data Source=localhost;Initial Catalog=MovieStore;Integrated Security=True;Encrypt=False"));
+
+builder.Logging.AddOpenTelemetry(o => o.AddConsoleExporter());
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

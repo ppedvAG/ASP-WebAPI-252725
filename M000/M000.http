@@ -34,3 +34,6 @@ Accept: application/json
  "price": "5.99",
  "genre": 0
 }
+
+### Create movies
+POST {{M000_HostAddress}}/api/moviestore/Generate

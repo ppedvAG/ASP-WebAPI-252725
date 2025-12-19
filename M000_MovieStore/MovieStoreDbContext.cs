@@ -16,8 +16,8 @@ public class MovieStoreDbContext : DbContext
 
 	public DbSet<Movie> Movies { get; set; }
 
-	protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-	{
-		optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=MovieStore;Integrated Security=True;Encrypt=False");
-	}
+	//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+	//{
+	//	optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=MovieStore;Integrated Security=True;Encrypt=False");
+	//}
 }

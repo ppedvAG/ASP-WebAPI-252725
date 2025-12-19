@@ -1,0 +1,16 @@
+@M007_Authentication_HostAddress = http://localhost:5295
+
+POST {{M007_Authentication_HostAddress}}/api/account/createroles
+
+###
+
+POST {{M007_Authentication_HostAddress}}/api/account/createuser?username=Lukas&password=123
+
+
+###
+POST {{M007_Authentication_HostAddress}}/api/account/loginuser?username=Lukas&password=123
+
+###
+GET {{M007_Authentication_HostAddress}}/WeatherForecast
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NjYxNTU1ODUsImV4cCI6MTc2NjI0MTk4NSwiaWF0IjoxNzY2MTU1NTg1LCJpc3MiOiJleGFtcGxlLmNvbSIsImF1ZCI6ImV4YW1wbGUuY29tIn0.hs0ygfpJPHcj7zUJHDl6z-P4pr2Y__gm2zlJKlpxAvLuRDCWKlNmn8VFFnfyxBzUe8o9nt1bt4yKjas1-ujewQ
