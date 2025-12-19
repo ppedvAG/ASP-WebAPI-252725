@@ -1,0 +1,14 @@
+@M005_EFCore_HostAddress = http://localhost:5288
+
+GET {{M005_EFCore_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{M005_EFCore_HostAddress}}/api/northwind/allcustomers
+Accept: application/json
+
+###
+
+POST {{M005_EFCore_HostAddress}}/api/northwind/newcustomer?CustomerId=PPEDV&CompanyName=ppedvAG
+Accept: application/json

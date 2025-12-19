@@ -1,16 +1,17 @@
-using M004_Routing;
+using M005_EFCore.Models;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers(o => o.OutputFormatters.Add(new CsvFormatter())).AddXmlSerializerFormatters();
-
-//builder.Services.AddSingleton<DateService>();
-builder.Services.AddDateService(); //Nach der Erweiterungsmethode
-
+builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+//string conn = builder.Configuration["ConnectionStrings:Northwind"];
+string conn = builder.Configuration.GetConnectionString("Northwind");
+builder.Services.AddDbContext<NorthwindContext>(o => o.UseSqlServer(conn));
 
 var app = builder.Build();
 
@@ -24,6 +25,6 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllerRoute("default", "{controller}/api/{action}");
+app.MapControllers();
 
 app.Run();
