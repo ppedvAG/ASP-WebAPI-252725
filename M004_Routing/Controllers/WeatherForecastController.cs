@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Mime;
 
 namespace M004_Routing.Controllers;
 
 [ApiController]
+[Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
 	private static readonly string[] Summaries = new[]
@@ -18,14 +20,16 @@ public class WeatherForecastController : ControllerBase
 	}
 
 	[HttpGet(Name = "GetWeatherForecast")]
-	public IEnumerable<WeatherForecast> Get()
+	[Produces(MediaTypeNames.Application.Json, MediaTypeNames.Application.Xml, MediaTypeNames.Text.Csv)]
+	public IEnumerable<WeatherForecastDTO> Get()
 	{
+		int zahl = 2143;
+		int q = zahl.Quersumme();
+
 		return Enumerable.Range(1, 5).Select(index => new WeatherForecast
 		{
 			Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-			TemperatureC = Random.Shared.Next(-20, 55),
-			Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-		})
-		.ToArray();
+			TemperatureC = Random.Shared.Next(-20, 55)
+		}.ToDTO());
 	}
 }

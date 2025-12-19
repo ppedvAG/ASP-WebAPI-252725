@@ -5,7 +5,15 @@ meta {
 }
 
 get {
-  url: https://localhost:7219/WeatherForecast
+  url: https://localhost:7110/WeatherForecast
   body: none
-  auth: none
+  auth: bearer
+}
+
+headers {
+  Authorization: eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ikx1a2FzS0BwcGVkdi5kZSIsImdpdmVuX25hbWUiOiJMdWthcyIsIm5iZiI6MTc2NjA5NjM5MywiZXhwIjoxNzY2MTgyNzkzLCJpYXQiOjE3NjYwOTYzOTMsImlzcyI6ImV4YW1wbGUuY29tIiwiYXVkIjoiZXhhbXBsZS5jb20ifQ.KXH_dZ6B3baQrG8j2NMnnkBZWuJLa2-1EP7pkXT1SDTLq6b1q0d1bM1CbtppEHpojp1sgGs8Ip1-45DSxDaHOQ
+}
+
+auth:bearer {
+  token: 
 }
